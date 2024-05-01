@@ -1,3 +1,13 @@
+<div class="container py-5">
 <h1>Welcome to <%= @restaurant.name%>'s Page.</h1>
 
 <%= link_to "back to all restaurants", root_path %>
+
+<%= link_to "leave a review for this restaurant", new_restaurant_review_path(@restaurant) %>
+
+<h2>Reviews for <%=@restaurant.name%></h2>
+  <ul>
+    <% @restaurant.reviews.each do |review| %>
+      <li><%= review.content %>   <%= '❤' * review.rating %></li>
+    <% end %>
+  </ul>

@@ -6,7 +6,7 @@
     <%= f.input :name %>
     <%= f.input :address %>
     <%= f.input :phone_number %>
-    <%= f.input :category %>
+    <%= f.select :category, :collection => ["chinese", "italian", "japanese", "french", "belgian"] %>
     <%= f.submit %>
   <% end %>
 </div>
